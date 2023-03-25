@@ -1,4 +1,4 @@
-package com.alt.random_chatting
+package com.alt.random_chatting.auth
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.alt.random_chatting.ui.theme.Random_ChattingTheme
 
-class MainActivity : ComponentActivity() {
+class Signup : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -22,9 +22,22 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-
+                    Greeting2("Android")
                 }
             }
         }
+    }
+}
+
+@Composable
+fun Greeting2(name: String) {
+    Text(text = "Hello $name!")
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview2() {
+    Random_ChattingTheme {
+        Greeting2("Android")
     }
 }
